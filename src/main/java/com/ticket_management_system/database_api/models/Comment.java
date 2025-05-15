@@ -8,7 +8,9 @@ import java.util.UUID;
 @Entity
 @Table(name = "comments")
 public class Comment {
-    //@GeneratedValue(strategy = GenerationType.AUTO)
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     UUID id;
     String commentDescription;
     @ManyToOne
