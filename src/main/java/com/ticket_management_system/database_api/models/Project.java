@@ -19,8 +19,6 @@ public class Project {
     List<Employee> employees;
     @ManyToOne
     Organization organization;
-    @OneToMany
-    List<Operation> operations;
     LocalDateTime createdAt;
     LocalDateTime updatedAt;
 

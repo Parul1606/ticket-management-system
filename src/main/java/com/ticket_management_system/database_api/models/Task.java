@@ -16,7 +16,7 @@ public class Task {
     String name;
     String description;
     @ManyToOne
-    Employee asignee;
+    Employee assignee;
     @ManyToOne
     Project project;
     int points;
