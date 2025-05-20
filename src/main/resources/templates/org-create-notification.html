@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Organization Registered Successfully</title>
+    <style>
+        body {
+            background-color: #f4f6f8;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 30px auto;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        .header {
+            background-color: #0052cc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            padding: 30px;
+            color: #333;
+        }
+        .content h2 {
+            margin-top: 0;
+            color: #0052cc;
+        }
+        .details {
+            background: #f0f4f8;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+        .details p {
+            margin: 8px 0;
+            font-size: 14px;
+        }
+        a.button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background-color: #0052cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .footer {
+            background: #f1f1f1;
+            text-align: center;
+            padding: 15px;
+            font-size: 12px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+<div class="email-container">
+    <div class="header">
+        <h1>Welcome to [[${platformName}]]</h1>
+    </div>
+    <div class="content">
+        <h2>Hello [[${adminName}]],</h2>
+        <p>We’re thrilled to welcome your organization to <strong>[[${platformName}]]</strong>.</p>
+        <p>Your account has been created successfully with the following details:</p>
+
+        <div class="details">
+            <p><strong>Organization Name:</strong> [[${name}]]</p>
+            <p><strong>Registered Name:</strong> [[${registeredName}]]</p>
+            <p><strong>Website:</strong> <a href="[[${websiteUrl}]]" target="_blank">[[${websiteUrl}]]</a></p>
+            <p><strong>Company Size:</strong> [[${companySize}]]</p>
+            <p><strong>Admin Email:</strong> [[${adminEmail}]]</p>
+            <p><strong>Admin Name:</strong> [[${adminName}]]</p>
+            <p><strong>Address:</strong> [[${address}]]</p>
+            <p><strong>Created At:</strong> [[${createdAt}]]</p>
+        </div>
+
+        <p style="margin-top: 20px;">You can now log in using your email and password.</p>
+
+        <p style="margin-top: 20px;">If you have any questions, feel free to contact our support team.</p>
+
+        <p>Thanks and welcome aboard!<br>The [[${platformName}]] Team</p>
+    </div>
+    <div class="footer">
+        &copy; 2025 [[${platformName}]]. All rights reserved.<br>
+        This is an automated email. Please do not reply.
+    </div>
+</div>
+
+</body>
+</html>
