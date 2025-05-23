@@ -13,7 +13,6 @@ public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     UUID id;
-    @Column(unique = true)
     String name;
     @ManyToOne
     Organization organization;
