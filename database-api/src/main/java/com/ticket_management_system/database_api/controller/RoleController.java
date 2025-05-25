@@ -12,6 +12,7 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/api/v1/db/role")
 public class RoleController {
+
     @Autowired
     RoleRepository roleRepository;
 

@@ -4,6 +4,7 @@ import com.ticket_management_system.database_api.models.Employee;
 import com.ticket_management_system.database_api.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -40,10 +41,9 @@ public class EmployeeController {
         return new ResponseEntity(HttpStatus.NO_CONTENT);
     }
 
-
     @GetMapping("/email/{emailId}")
     public ResponseEntity getEmployeeByEmail(@PathVariable String email){
-        Employee emp  = employeeRepository.findByEmail(email);
+        Employee emp = employeeRepository.findByEmail(email);
         return new ResponseEntity(emp, HttpStatus.OK);
     }
 }
